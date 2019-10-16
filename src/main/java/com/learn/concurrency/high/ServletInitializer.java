@@ -1,4 +1,4 @@
-package com.learn.concurrency;
+package com.learn.concurrency.high;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;

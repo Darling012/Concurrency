@@ -1,4 +1,4 @@
-package com.learn.concurrency;
+package com.learn.concurrency.high;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

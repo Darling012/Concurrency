@@ -5,12 +5,13 @@ import com.learn.concurrency.annoations.ThreadSafe;
 /**
  * 懒汉模式 -》 双重同步锁单例模式
  * 单例实例在第一次使用时进行创建
+ * @author Darling
  */
 @ThreadSafe
-public class SingletonExample5 {
+public class LazySingleSafe {
 
     // 私有构造函数
-    private SingletonExample5() {
+    private LazySingleSafe() {
 
     }
 
@@ -19,14 +20,14 @@ public class SingletonExample5 {
     // 3、instance = memory 设置instance指向刚分配的内存
 
     // 单例对象 volatile + 双重检测机制 -> 禁止指令重排
-    private volatile static SingletonExample5 instance = null;
+    private volatile static LazySingleSafe instance = null;
 
     // 静态的工厂方法
-    public static SingletonExample5 getInstance() {
+    public static LazySingleSafe getInstance() {
         if (instance == null) { // 双重检测机制        // B
-            synchronized (SingletonExample5.class) { // 同步锁
+            synchronized (LazySingleSafe.class) { // 同步锁
                 if (instance == null) {
-                    instance = new SingletonExample5(); // A - 3
+                    instance = new LazySingleSafe(); // A - 3
                 }
             }
         }

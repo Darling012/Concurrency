@@ -1,4 +1,4 @@
-package com.learn.concurrency.example.threadPool;
+package com.learn.concurrency.example.ExecutorCompletionService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,9 +27,9 @@ import java.util.concurrent.Future;
  **/
 public class ExecutorCompletionServiceTest {
   public static void main(String[] args) throws ExecutionException, InterruptedException {
-       case1();
+       // case1();
        // case2();
-//         case3();
+        case3();
     }
 
 

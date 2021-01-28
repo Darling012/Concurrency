@@ -1,4 +1,4 @@
-package com.learn.concurrency.example.ExecutorCompletionService;
+package com.learn.concurrency.example.CompletionService;
 
 import java.util.ArrayList;
 import java.util.List;

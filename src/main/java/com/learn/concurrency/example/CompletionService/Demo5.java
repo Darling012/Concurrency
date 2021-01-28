@@ -1,10 +1,9 @@
-package com.learn.concurrency.example.ExecutorCompletionService;
+package com.learn.concurrency.example.CompletionService;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.*;
-import java.util.function.Consumer;
 
 /**
  * 异步执行一批任务，有一个完成立即返回，其他取消

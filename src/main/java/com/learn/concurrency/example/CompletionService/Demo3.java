@@ -1,11 +1,10 @@
-package com.learn.concurrency.example.ExecutorCompletionService;
+package com.learn.concurrency.example.CompletionService;
 
 import java.util.concurrent.*;
 
 /**
- * 买新房了，然后在网上下单买冰箱、洗衣机，电器商家不同，所以送货耗时不一样，然后等他们送货，快递只愿送到楼下，然后我们自己将其搬到楼上的家中。
  */
-public class Demo1 {
+public class Demo3 {
     static class GoodsModel {
         //商品名称
         String name;
@@ -56,7 +55,7 @@ public class Demo1 {
                 e.printStackTrace();
             }
             long endTime = System.currentTimeMillis();
-            System.out.println(startTime + name + "送到了!");
+            System.out.println(endTime + name + "送到了!");
             return new GoodsModel(name, startTime, endTime);
         };
     }
@@ -64,24 +63,25 @@ public class Demo1 {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         long st = System.currentTimeMillis();
         System.out.println(st + "开始购物!");
-
-        //创建一个线程池，用来异步下单
         ExecutorService executor = Executors.newFixedThreadPool(5);
+
+        //创建ExecutorCompletionService对象
+        ExecutorCompletionService<GoodsModel> executorCompletionService = new ExecutorCompletionService<>(executor);
         //异步下单购买冰箱
-        Future<GoodsModel> bxFuture = executor.submit(buyGoods("冰箱", 5));
+        executorCompletionService.submit(buyGoods("冰箱", 5));
         //异步下单购买洗衣机
-        Future<GoodsModel> xyjFuture = executor.submit(buyGoods("洗衣机", 2));
-        //关闭线程池
+        executorCompletionService.submit(buyGoods("洗衣机", 2));
         executor.shutdown();
 
-        //等待冰箱送到
-        GoodsModel bxGoodModel = bxFuture.get();
-        //将冰箱搬上楼
-        moveUp(bxGoodModel);
-        //等待洗衣机送到
-        GoodsModel xyjGooldModel = xyjFuture.get();
-        //将洗衣机搬上楼
-        moveUp(xyjGooldModel);
+        //购买商品的数量
+        int goodsCount = 2;
+        for (int i = 0; i < goodsCount; i++) {
+            //可以获取到最先到的商品
+            GoodsModel goodsModel = executorCompletionService.take().get();
+            //将最先到的商品送上楼
+            moveUp(goodsModel);
+        }
+
         long et = System.currentTimeMillis();
         System.out.println(et + "货物已送到家里咯，哈哈哈！");
         System.out.println("总耗时:" + (et - st));

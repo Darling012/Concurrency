@@ -1,4 +1,4 @@
-package com.learn.concurrency.example.CompletionService;
+package com.learn.concurrency.example.completionService;
 
 import java.util.concurrent.*;
 

@@ -1,4 +1,4 @@
-package threadcoreknowledge.createthreads;
+package com.learn.concurrency.core.threadcoreknowledge.createthreads;
 
 /**
  * 描述：     用Runnable方式创建线程

@@ -1,4 +1,4 @@
-package singleton;
+package com.learn.concurrency.core.singleton;
 
 /**
  * 描述：     双重检查（推荐面试使用）

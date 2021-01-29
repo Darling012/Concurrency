@@ -1,4 +1,4 @@
-package deadlock;
+package com.learn.concurrency.core.deadlock;
 
 import java.util.Random;
 import jdk.management.resource.internal.inst.RandomAccessFileRMHooks;

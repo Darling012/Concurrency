@@ -1,4 +1,4 @@
-package jmm;
+package com.learn.concurrency.core.jmm;
 
 /**
  * 描述：     演示可见性带来的问题

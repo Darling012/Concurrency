@@ -1,4 +1,4 @@
-package singleton;
+package com.learn.concurrency.core.singleton;
 
 /**
  * 描述：     懒汉式（线程不安全）

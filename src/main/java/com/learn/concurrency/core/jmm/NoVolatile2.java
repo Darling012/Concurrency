@@ -1,4 +1,4 @@
-package jmm;
+package com.learn.concurrency.core.jmm;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

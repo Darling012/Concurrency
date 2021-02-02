@@ -1,4 +1,4 @@
-package threadcoreknowledge.uncaughtexception;
+package com.learn.concurrency.core.threadcoreknowledge.uncaughtexception;
 
 /**
  * 描述： 1. 不加try catch抛出4个异常，都带线程名字 2. 加了try catch,期望捕获到第一个线程的异常，线程234不应该运行，希望看到打印出Caught Exception

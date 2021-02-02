@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 @Slf4j
-public class ThreadPoolExample2 {
+public class FixedThreadPoolExample {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 

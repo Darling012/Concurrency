@@ -10,7 +10,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
-public class ThreadPoolExample4 {
+public class ScheduledThreadPoolExample {
 
     public static void main(String[] args) {
 

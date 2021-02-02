@@ -6,7 +6,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @Slf4j
-public class ThreadPoolExample3 {
+public class SingleThreadPoolExample {
 
     public static void main(String[] args) {
 

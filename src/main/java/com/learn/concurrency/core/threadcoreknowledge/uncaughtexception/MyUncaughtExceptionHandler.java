@@ -1,4 +1,4 @@
-package threadcoreknowledge.uncaughtexception;
+package com.learn.concurrency.core.threadcoreknowledge.uncaughtexception;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

@@ -1,4 +1,4 @@
-package singleton;
+package com.learn.concurrency.core.singleton;
 
 /**
  * 描述：     静态内部类方式，可用

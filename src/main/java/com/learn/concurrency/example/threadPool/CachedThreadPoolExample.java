@@ -6,7 +6,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @Slf4j
-public class ThreadPoolExample1 {
+public class CachedThreadPoolExample {
 
     public static void main(String[] args) {
 

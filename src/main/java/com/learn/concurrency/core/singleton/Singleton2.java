@@ -1,5 +1,4 @@
-package singleton;
-
+package com.learn.concurrency.core.singleton;
 /**
  * 描述：     饿汉式（静态代码块）（可用）
  */

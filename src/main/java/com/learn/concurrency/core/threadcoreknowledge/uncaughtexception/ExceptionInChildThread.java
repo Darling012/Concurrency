@@ -6,7 +6,11 @@ package com.learn.concurrency.core.threadcoreknowledge.uncaughtexception;
 public class ExceptionInChildThread implements Runnable {
 
     public static void main(String[] args) {
-        new Thread(new ExceptionInChildThread()).start();
+        try{
+            new Thread(new ExceptionInChildThread()).start();
+        } catch (Exception e){
+            System.out.println("dfdsf");
+        }
         for (int i = 0; i < 1000; i++) {
             System.out.println(i);
         }

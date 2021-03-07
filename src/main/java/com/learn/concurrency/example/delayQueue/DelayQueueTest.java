@@ -31,7 +31,7 @@ public class DelayQueueTest {
         @Override
         public long getDelay(TimeUnit unit) {
 
-            return unit.convert(this.expire-System.currentTimeMillis(),TimeUnit.MILLISECONDS);
+            return unit.convert(this.expire - System.currentTimeMillis(), TimeUnit.MILLISECONDS);
         }
 
         @Override
@@ -42,15 +42,24 @@ public class DelayQueueTest {
 
     public static void main(String[] args) throws InterruptedException {
         DelayQueue<DelayedStr> delayQueue = new DelayQueue<>();
-        DelayedStr a = new DelayedStr(500,"任务1");
-        DelayedStr b = new DelayedStr(1500,"任务2");
+        DelayedStr a = new DelayedStr(500, "任务1");
+        DelayedStr b = new DelayedStr(1500, "任务2");
+        DelayedStr c = new DelayedStr(1500, "任务3");
+        DelayedStr d = new DelayedStr(1500, "任务3");
+
         delayQueue.offer(a);
         delayQueue.offer(b);
+        delayQueue.offer(c);
+        delayQueue.offer(d);
         DelayedStr now = null;
-        for(;;){
-            while ((now=delayQueue.take())!= null){
-                System.out.println(now.taskName);
-            }
+        for (; ; ) {
+            System.out.println("======================");
+            System.out.println(delayQueue.size());
+            System.out.println("======================");
+            // while ((now = delayQueue.take()) != null) {
+            //     System.out.println(delayQueue.size());
+            //     System.out.println(now.taskName);
+            // }
         }
     }
 }
